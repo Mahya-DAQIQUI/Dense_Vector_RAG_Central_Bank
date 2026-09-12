@@ -4,6 +4,7 @@ This repository contains the implementation and experimental notebooks for the m
 The project investigates a dense-vector RAG pipeline for domain-specific question answering over central bank speeches.
 The experiments evaluate the effects of text splitting, chunk size, chunk overlap, embedding models, vector database backends, domain-adaptive embedding fine-tuning, and cross-encoder reranking on retrieval and generated-answer performance.
 The pipeline uses locally executable embedding and language models. The models were downloaded and executed directly within Google Colab without relying on external inference APIs.
+
 ---
 
 ## Baseline Configuration
@@ -54,6 +55,7 @@ The baseline MPNet embedding model is fine-tuned using domain-specific question-
 ### 7. Cross-Encoder Reranking
 Cross-encoder reranking is evaluated as an optional post-retrieval component.
 The reranking configuration retrieves an initial candidate pool of 50 chunks, reranks them using a cross-encoder, and supplies the top 4 reranked chunks to the language model.
+
 ---
 
 ## Evaluation
