@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment variables and secrets
+.env
+.env.*
+*.env
+credentials.*
+secrets.*
+
+# IDE files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Hugging Face and model caches
+.cache/
+huggingface/
+transformers_cache/
+
+# Large model files
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+
+# Local vector databases
+qdrant_storage/
+weaviate_data/
+*.faiss
+*.index
+
+# Temporary files
+tmp/
+temp/
+cache/
+
+# Logs
+logs/
+*.log 
