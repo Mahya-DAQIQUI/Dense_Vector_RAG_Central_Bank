@@ -224,110 +224,118 @@ central-bank-rag/
     │   └── finetuned_mpnet.ipynb
     └── 07_cross_encoder_reranking/
         └── cross_encoder_reranking.ipynb
-Root Files and Directories
-README.md — Project overview, experimental configurations, evaluation methodology, repository structure, and execution instructions.
-requirements.txt — Python dependencies required to run the notebooks.
-.gitignore — Files and directories excluded from version control.
-data/ — Data preparation instructions and information about the source dataset.
-notebooks/ — Baseline and experimental notebooks organized according to the evaluated RAG components.
-Notebook Directories
-00_baseline/ — Baseline RAG configuration.
-01_text_splitting/ — Experiments comparing text splitting strategies.
-02_embedding_models/ — Experiments comparing embedding models.
-03_vector_databases/ — Experiments comparing vector storage backends.
-04_chunk_size/ — Experiments evaluating different chunk sizes.
-05_chunk_overlap/ — Experiments evaluating different chunk-overlap configurations.
-06_embedding_finetuning/ — Domain-adaptive embedding fine-tuning experiment.
-07_cross_encoder_reranking/ — Cross-encoder reranking experiment.
+```
+### Root Files and Directories
+
+- `README.md` — Project overview, experimental configurations, evaluation methodology, repository structure, and execution instructions.
+- `requirements.txt` — Python dependencies required to run the notebooks.
+- `.gitignore` — Files and directories excluded from version control.
+- `data/` — Data preparation instructions and information about the source dataset.
+- `notebooks/` — Baseline and experimental notebooks organized according to the evaluated RAG components.
+
+### Notebook Directories
+
+- `00_baseline/` — Baseline RAG configuration.
+- `01_text_splitting/` — Experiments comparing text splitting strategies.
+- `02_embedding_models/` — Experiments comparing embedding models.
+- `03_vector_databases/` — Experiments comparing vector storage backends.
+- `04_chunk_size/` — Experiments evaluating different chunk sizes.
+- `05_chunk_overlap/` — Experiments evaluating different chunk-overlap configurations.
+- `06_embedding_finetuning/` — Domain-adaptive embedding fine-tuning experiment.
+- `07_cross_encoder_reranking/` — Cross-encoder reranking experiment.
 
 Each notebook contains the corresponding experimental pipeline, evaluation procedure, configuration settings, and experimental outputs.
 
-Running the Notebooks
+---
+
+
+## Running the Notebooks
 
 The notebooks were developed and tested in Google Colab and can be executed in a compatible Python/Jupyter environment.
 
 To start the project:
 
-Clone the repository.
-Install the required Python dependencies:
-pip install -r requirements.txt
-Prepare the required data according to the instructions provided in:
+1.	Clone the repository.
 
-data/README.md
+2.	Install the required Python dependencies:
+  ```bash
+  pip install -r requirements.txt
+  ```
+3.	Prepare the required data according to the instructions provided in:
+`data/README.md`
 
-Open the desired notebook under:
+4.	Open the desired notebook under:
+`notebooks/`
 
-notebooks/
-
-Run the notebook cells sequentially.
-
+5.	Run the notebook cells sequentially.
 The baseline configuration is provided in:
-
-notebooks/00_baseline/baseline_rag.ipynb
+`notebooks/00_baseline/baseline_rag.ipynb`
 
 The remaining notebook directories contain the comparative experiments for the individual RAG components.
 
 Some experiments require downloading pretrained embedding, reranking, or language models. These models are loaded and executed locally within the computational environment.
 
-Data
+---
+
+
+## Data
 
 The original central bank speech corpus is not redistributed in this repository.
 
 Instructions for obtaining and preparing the dataset used in the study are provided in:
-
-data/README.md
-
+`data/README.md`
 The experimental benchmark consists of 150 curated question-answer pairs derived from central bank speeches.
-
 Users attempting to reproduce the experiments should follow the data preparation instructions and use the same dataset configuration described in the thesis.
 
-Reproducibility
+---
+
+
+## Reproducibility
 
 The repository provides the complete experimental notebooks, dependency specifications, data preparation instructions, evaluation procedures, and configuration details required to inspect and reproduce the experimental pipeline.
-
 The notebooks contain the implementation of the baseline system and the comparative experiments described in the thesis.
-
 Large model files, model caches, local vector database files, temporary generated files, and other environment-specific artifacts are not included in the repository.
-
 The experiments were originally developed and tested in Google Colab. Reproduction may therefore require a compatible GPU environment and sufficient computational resources, particularly for experiments involving the Llama-3-8B-Instruct language model and embedding fine-tuning.
 
-Software and Libraries
+---
 
+## Software and Libraries
 The project uses the following main software libraries and frameworks:
 
-Python
-PyTorch
-Hugging Face Transformers
-Sentence Transformers
-Accelerate
-BitsAndBytes
-LangChain
-Qdrant
-FAISS
-Weaviate
-BERTScore
-pandas
-NumPy
-scikit-learn
-Jupyter / Google Colab
+- Python
+- PyTorch
+- Hugging Face Transformers
+- Sentence Transformers
+- Accelerate
+- BitsAndBytes
+- LangChain
+- Qdrant
+- FAISS
+- Weaviate
+- BERTScore
+- pandas
+- NumPy
+- scikit-learn
+- Jupyter / Google Colab
 
 The required Python packages are specified in:
+`requirements.txt`
 
-requirements.txt
+---
 
-Notes on Model Execution
-
+## Notes on Model Execution
 The language and embedding models used in this project are locally executable within the computational environment.
-
 The experiments do not depend on external inference APIs for model generation. Pretrained models are downloaded and executed directly in the Google Colab environment or another compatible local/Jupyter environment.
-
 The specific model versions and configurations used in the thesis should be considered when reproducing the reported results.
 
-Citation
+---
 
+
+## Citation
 If you use this repository or build upon the experimental implementation, please cite the associated thesis.
 
-License
+---
 
+
+## License
 This project is released under the MIT License. See the LICENSE file for details.
-
